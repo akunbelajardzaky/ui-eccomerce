@@ -1,0 +1,46 @@
+<template>
+  <div class="p-5" style="background-color: rgb(44, 44, 44); border-radius: 30px;">
+    <svg
+      v-if="!isClicked"
+      @click="isClicked = true"
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none">
+      <path
+        d="M17.5933 3.32241C18.6939 3.45014 19.5 4.399 19.5 5.50699V21L12 17.25L4.5 21V5.50699C4.5 4.399 5.30608 3.45014 6.40668 3.32241C8.24156 3.10947 10.108 3 12 3C13.892 3 15.7584 3.10947 17.5933 3.32241Z"
+        stroke="white"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round" />
+    </svg>
+
+    <svg
+      v-else-if="isClicked"
+      @click="isClicked = false"
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none">
+      <path
+        d="M16.1837 5.25076C17.0397 5.35011 17.6667 6.08811 17.6667 6.94988V19L11.8333 16.0833L6 19V6.94988C6 6.08811 6.62695 5.35011 7.48297 5.25076C8.9101 5.08514 10.3618 5 11.8333 5C13.3049 5 14.7566 5.08514 16.1837 5.25076Z"
+        fill="#F4CE47"
+        stroke="#F4CE47"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round" />
+    </svg>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      isClicked: false,
+    };
+  },
+};
+</script>
